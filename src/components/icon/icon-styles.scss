@@ -1,0 +1,11 @@
+@import '../../styles/settings.scss';
+
+.icon {
+  width: 15px;
+  height: 15px;
+  fill: $icon-color;
+}
+
+.cursor {
+  cursor: pointer;
+}

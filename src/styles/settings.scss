@@ -1,0 +1,35 @@
+// Font families
+$font-family-1: 'Lato', sans-serif;
+
+// Font sizes
+$font-size-xs: 0.75rem; // 12px / 16px
+$font-size-s: 0.8125rem; // 13px / 16px
+$font-size-sm: 0.875rem; // 14px / 16px
+$font-size: 1rem; // 16px / 16px
+$font-size-m: 1.1875rem; // 19px / 16px
+$font-size-large: 1.5rem; // 24px / 16px
+$font-size-x-large: 2.75rem; // 44px / 16px
+$font-size-xl-large: 3.375rem; // 54px / 16px
+
+//font-weights
+$font-weight-light: 300;
+$font-weight: 400;
+$font-weight-semi-bold: 500;
+$font-weight-bold: 600;
+
+// Colors
+$black: #333;
+$white: #fff;
+$gray: #b1b1c1;
+$light-gray: #f5f6f7;
+$yellow: #ffc735;
+$turquoise: #1bcec7;
+
+// App color schema
+$theme-color: $turquoise;
+$theme-secondary: #ffc735;
+
+$text-color: $black;
+
+$icon-color: rgba(26, 28, 34, 0.1);
+$border-color: rgba(26, 28, 34, 0.1);
