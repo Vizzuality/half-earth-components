@@ -14,6 +14,24 @@ import { NoContent, Loading, Table } from 'he-components';
 
 and will be ready to use them!
 
+## Development
+
+To launch the playground and see the component list run:
+```
+yarn start
+```
+
+When you want to try a component directly in the project run:
+```
+yarn link
+```
+
+Go to the .env file and set WATCH_COMPILING flag to true
+```
+yarn compile
+```
+
+Go to the project and run yarn link "he-components" to use the local version instead of the github one.
 
 ## Release
 

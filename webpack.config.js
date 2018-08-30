@@ -14,6 +14,7 @@ const BundleAnalyzerPlugin = require(
 const config = {
   entry: './src/index.js',
   mode: 'production',
+  watch: process.env.WATCH_COMPILING ? true : false,
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -99,11 +100,11 @@ const config = {
       test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$/,
       threshold: 10240,
       minRatio: 0.8
-    }),
+    })
   ]
 };
 
-if (!!process.env.BUNDLE_ANALYZE) {
+if (process.env.BUNDLE_ANALYZE) {
   config.plugins.push(new BundleAnalyzerPlugin({ analyzerMode: 'static' }));
 }
 
