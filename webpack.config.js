@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const path = require('path');
 const glob = require('glob');
 const webpack = require('webpack');
@@ -98,8 +100,11 @@ const config = {
       threshold: 10240,
       minRatio: 0.8
     }),
-    new BundleAnalyzerPlugin()
   ]
 };
+
+if (!!process.env.BUNDLE_ANALYZE) {
+  config.plugins.push(new BundleAnalyzerPlugin({ analyzerMode: 'static' }));
+}
 
 module.exports = config;
