@@ -5,7 +5,7 @@ $transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 .sidebar {
   min-height: 100vh;
-  padding: 40px;
+  padding: 25px 30px;
   position: relative;
   display: inline-block;
   background-color: $white;
@@ -19,14 +19,14 @@ $transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
 .button {
   position: absolute;
-  right: -50px;
-  top: 40px;
+  right: -59px;
+  top: 60px;
   height: 30px;
   width: auto;
   border: none;
   transform: rotate(-90deg);
   background-color: $white;
-  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
@@ -39,9 +39,9 @@ $transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .iconHide {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 
 .iconOpen {
-  transform: rotate(0);
+  transform: rotate(-90deg);
 }

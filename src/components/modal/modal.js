@@ -55,7 +55,7 @@ class Modal extends PureComponent {
         >
           <Icon
             icon={closeIcon}
-            theme={{ icon: cx(styles.close, theme.close) }}
+            theme={{ icon: cx(styles.closeIcon, theme.closeIcon) }}
           />
         </Button>
         <div className={cx(styles.modalContent, theme.modalContent)}>
@@ -82,7 +82,8 @@ Modal.propTypes = {
   /* Theme options */
   theme: PropTypes.shape({
     modal: PropTypes.string,
-    close: PropTypes.string,
+    closeBtn: PropTypes.string,
+    closeIcon: PropTypes.string,
     modalContent: PropTypes.string
   }),
   /* Callback when click outside or in the X button */

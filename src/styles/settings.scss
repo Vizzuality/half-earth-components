@@ -1,15 +1,12 @@
-// Font families
-$font-family-1: 'Lato', sans-serif;
-
 // Font sizes
-$font-size-xs: 0.75rem; // 12px / 16px
-$font-size-s: 0.8125rem; // 13px / 16px
-$font-size-sm: 0.875rem; // 14px / 16px
-$font-size: 1rem; // 16px / 16px
-$font-size-m: 1.1875rem; // 19px / 16px
-$font-size-large: 1.5rem; // 24px / 16px
-$font-size-x-large: 2.75rem; // 44px / 16px
-$font-size-xl-large: 3.375rem; // 54px / 16px
+$font-size-xs: 12px;
+$font-size-s: 13px;
+$font-size-sm: 14px;
+$font-size: 16px;
+$font-size-m: 19px;
+$font-size-l: 24px;
+$font-size-xl: 44px;
+$font-size-xxl: 54px;
 
 //font-weights
 $font-weight-light: 300;
@@ -18,18 +15,29 @@ $font-weight-semi-bold: 500;
 $font-weight-bold: 600;
 
 // Colors
-$black: #333;
+$dark: #0a212e;
 $white: #fff;
-$gray: #b1b1c1;
-$light-gray: #f5f6f7;
-$yellow: #ffc735;
-$turquoise: #1bcec7;
+$gray: #495a64;
+$light-gray: #eff3f5;
+$turquoise: #18bab4;
+$redonrange: #ea573f;
 
-// App color schema
-$theme-color: $turquoise;
-$theme-secondary: #ffc735;
+/* THEME COLORS */
 
-$text-color: $black;
+// Buttons
+$primary-color: $turquoise;
+$secondary-color: $redonrange;
 
-$icon-color: rgba(26, 28, 34, 0.1);
-$border-color: rgba(26, 28, 34, 0.1);
+$icon-color: $dark;
+$border-color: $gray;
+
+// Texts
+$text-color-dark: $dark;
+$text-color-secondary: $gray;
+$text-color-light: $white;
+
+// Backgrounds
+$bg-color-dark: $dark;
+$bg-color-secondary: $light-gray;
+$bg-color-light: $white;
+

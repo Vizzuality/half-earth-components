@@ -23,7 +23,7 @@ const SwitchInput = props => {
           id={id}
           type="checkbox"
           checked={checked}
-          onChange={onChange}
+          onChange={() => onChange(!checked)}
           className={styles.checkbox}
           disabled={disabled}
         />
@@ -47,7 +47,7 @@ SwitchInput.propTypes = {
     wrapper: PropTypes.string,
     switch: PropTypes.string,
     label: PropTypes.string,
-    slider: PropTypes.string,
+    slider: PropTypes.string
   })
 };
 
