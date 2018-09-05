@@ -7,8 +7,7 @@
     "start": "styleguidist server",
     "build": "styleguidist build",
     "compile": "webpack",
-    "deploy": "yarn run build && gh-pages -d styleguide",
-    "postinstall": "yarn compile"
+    "deploy": "yarn run build && gh-pages -d styleguide"
   },
   "lint-staged": {
     "**/*.scss": "stylelint --syntax=scss --fix",
