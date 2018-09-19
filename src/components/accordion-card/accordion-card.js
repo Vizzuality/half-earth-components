@@ -18,12 +18,16 @@ class AccordionCard extends Component {
   }
 
   render() {
-    const { icon, title, children } = this.props;
+    const { icon, title, children, theme } = this.props;
     const { isOpen } = this.state;
     return (
-      <div className={cx(styles.cardContainer, { [styles.open]: isOpen })}>
-        <div className={styles.headerContainer}>
-          <h2 className={styles.groupTitle}>
+      <div
+        className={cx(styles.cardContainer, theme.cardContainer, {
+          [styles.open]: isOpen
+        })}
+      >
+        <div className={cx(styles.headerContainer, theme.headerContainer)}>
+          <h2 className={cx(styles.groupTitle, theme.groupTitle)}>
             {title}
           </h2>
           <Button
@@ -55,9 +59,15 @@ AccordionCard.propTypes = {
   /** Text to be displayed as header */
   title: PropTypes.string.isRequired,
   /** Any data structure to render */
-  children: PropTypes.shape({}).isRequired
+  children: PropTypes.shape({}).isRequired,
+  /** Theming checkbox with customized styles */
+  theme: PropTypes.shape({
+    cardContainer: PropTypes.string,
+    headerContainer: PropTypes.string,
+    groupTitle: PropTypes.string
+  })
 };
 
-AccordionCard.defaultProps = { isOpen: false, icon: chevronIcon };
+AccordionCard.defaultProps = { isOpen: false, icon: chevronIcon, theme: {} };
 
 export default AccordionCard;
