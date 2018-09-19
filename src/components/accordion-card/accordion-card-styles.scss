@@ -1,0 +1,46 @@
+@import '../../styles/settings';
+
+.cardContainer {
+  padding: 30px;
+  background-color: $white;
+  margin-bottom: 4px;
+  overflow: hidden;
+  height: 75px;
+  transition: all 0.3s;
+
+  .groupTitle {
+    font-size: 20px;
+  }
+
+  &.open {
+    height: auto;
+    overflow: inherit;
+  }
+}
+
+.toggleButton {
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.headerContainer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.icon {
+  transform: rotate(90deg);
+  fill: $turquoise;
+}
+
+.iconCollapse {
+  transform: rotate(270deg);
+  fill: $turquoise;
+}
