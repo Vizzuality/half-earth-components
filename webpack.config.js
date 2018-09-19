@@ -14,7 +14,6 @@ const BundleAnalyzerPlugin = require(
 const config = {
   entry: './src/index.js',
   mode: 'production',
-  watch: process.env.WATCH_COMPILING ? true : false,
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',

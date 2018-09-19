@@ -8,6 +8,9 @@
 /styleguide
 /dist
 
+# env
+.env
+
 # testing
 /coverage
 
