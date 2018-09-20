@@ -17,6 +17,7 @@ module.exports = {
       ]
     }
   },
+  theme: { fontFamily: { base: '"Lato", sans-serif' } },
   skipComponentsWithoutExample: true,
   getComponentPathLine: componentPath => {
     const dirname = path.dirname(componentPath, '.js');

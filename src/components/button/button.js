@@ -11,6 +11,8 @@ const Button = props => {
     link,
     children,
     circle,
+    primary,
+    secondary,
     disabled,
     onClick,
     theme
@@ -18,7 +20,9 @@ const Button = props => {
   const notActionable = disabled || !onClick && !link && !children;
   const classNames = cx(styles.button, theme.button, {
     [styles.circle]: circle,
-    [styles.disabled]: notActionable,
+    [styles.primary]: primary,
+    [styles.secondary]: secondary,
+    [styles.disabled]: notActionable
   });
   if (link) {
     return (
@@ -52,6 +56,10 @@ Button.propTypes = {
   theme: PropTypes.shape({ button: PropTypes.string }),
   /** Option to render button as a circle */
   circle: PropTypes.bool,
+  /** Option to render button with primary styles */
+  primary: PropTypes.bool,
+  /** Option to render button with secondary styles */
+  secondary: PropTypes.bool,
   /** Option to disable clicking button */
   disabled: PropTypes.bool,
   /** Function called on clicking button */
@@ -63,6 +71,8 @@ Button.defaultProps = {
   link: null,
   children: null,
   circle: false,
+  primary: false,
+  secondary: false,
   onClick: () => {
   },
   theme: {}
