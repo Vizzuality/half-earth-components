@@ -1,3 +1,5 @@
+$font-family-1: 'PierSans', sans-serif;
+
 // Font sizes
 $font-size-xs: 12px;
 $font-size-s: 13px;
@@ -17,7 +19,7 @@ $font-weight-bold: 600;
 // Colors
 $dark: #0a212e;
 $white: #fff;
-$gray: #495a64;
+$gray: #adb5b9;
 $light-gray: #eff3f5;
 $turquoise: #18bab4;
 $redonrange: #ea573f;
@@ -26,7 +28,9 @@ $redonrange: #ea573f;
 
 // Buttons
 $primary-color: $turquoise;
+$primary-color-hover: #1cd4ce;
 $secondary-color: $redonrange;
+$secondary-color-hover: #ff6952;
 
 $icon-color: $dark;
 $border-color: $gray;

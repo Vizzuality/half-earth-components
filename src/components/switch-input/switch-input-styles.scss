@@ -10,6 +10,7 @@ $border-margin: 3px;
   justify-content: flex-start;
   position: relative;
   height: $switch-height;
+  font-family: $font-family-1;
 
   .slider {
     margin-left: 5px;
@@ -47,7 +48,7 @@ $border-margin: 3px;
   cursor: pointer;
   transition: 0.2s;
   width: $switch-width;
-  background-color: $light-gray;
+  background-color: $gray;
 }
 
 .slider::before {
@@ -79,4 +80,22 @@ input:checked ~ .label {
 
 .slider.round::before {
   border-radius: 50%;
+}
+
+.dark {
+  .label {
+    color: $white;
+  }
+
+  .slider::before {
+    background-color: $dark;
+  }
+
+  input:checked ~ .slider {
+    background-color: $primary-color;
+  }
+
+  input:checked ~ .label {
+    color: $white;
+  }
 }

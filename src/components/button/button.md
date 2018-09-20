@@ -1,10 +1,21 @@
 ```js
 const theme = require('./button-theme.scss');
+const Icon = require('components/icon');
 const onClick = () => { console.info('hello button') };
-<Button
-  theme={theme}
-  onClick={onClick}
->
-  Submit Button
-</Button>
+<div style={{display: 'flex'}}>
+  <Button
+    theme={theme}
+    onClick={onClick}
+    primary
+  >
+    Submit Button
+  </Button>
+  <Button
+    theme={theme}
+    onClick={onClick}
+    secondary
+  >
+    Be careful
+  </Button>
+</div>
 ```
