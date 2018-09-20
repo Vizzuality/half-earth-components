@@ -8,8 +8,8 @@ const toggleModalOpen = (slug) => {
 };
 const Button = require('../button').default;
 <React.Fragment>
-  <Button onClick={toggleModalOpen} >
-    Open it
+  <Button onClick={toggleModalOpen} primary>
+    Open modal
   </Button>
   <Modal
     isOpen={state.open}

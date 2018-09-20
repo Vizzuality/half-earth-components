@@ -8,13 +8,22 @@ import styles from './switch-input-styles.scss';
  * Represents a check input
  */
 const SwitchInput = props => {
-  const { id, label, checked, onChange, theme, toggleFirst, disabled } = props;
+  const {
+    id,
+    label,
+    checked,
+    onChange,
+    theme,
+    toggleFirst,
+    disabled,
+    dark
+  } = props;
   return (
     <div className={cx(styles.wrapper, theme.wrapper)}>
       <label
         className={cx(
           styles.switch,
-          { [styles.toggleFirst]: toggleFirst },
+          { [styles.toggleFirst]: toggleFirst, [styles.dark]: dark },
           theme.switch
         )}
         htmlFor={id}
@@ -41,6 +50,7 @@ SwitchInput.propTypes = {
   label: PropTypes.string,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
+  dark: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
   toggleFirst: PropTypes.bool,
   theme: PropTypes.shape({
@@ -57,6 +67,7 @@ SwitchInput.defaultProps = {
   label: '',
   checked: false,
   disabled: false,
+  dark: false,
   toggleFirst: true
 };
 
