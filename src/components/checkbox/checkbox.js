@@ -57,8 +57,7 @@ Checkbox.propTypes = {
   checkboxFirst: PropTypes.bool,
   /** Theming checkbox with customized styles */
   theme: PropTypes.shape({
-    wrapper: PropTypes.string,
-    switch: PropTypes.string,
+    container: PropTypes.string,
     input: PropTypes.string,
     label: PropTypes.string,
     checkboxFirst: PropTypes.string,
