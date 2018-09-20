@@ -9,43 +9,42 @@ import styles from './accordion-card-styles.scss';
 class AccordionCard extends Component {
   constructor(props) {
     super(props);
-    this.state = { isOpen: false };
-  }
-
-  componentDidMount() {
-    const { isOpen } = this.props;
-    this.setState({ isOpen });
+    this.state = { isOpen: props.isOpen };
   }
 
   render() {
     const { icon, title, children, theme } = this.props;
     const { isOpen } = this.state;
     return (
-      <div
-        className={cx(styles.cardContainer, theme.cardContainer, {
-          [styles.open]: isOpen
-        })}
-      >
-        <div className={cx(styles.headerContainer, theme.headerContainer)}>
-          <h2 className={cx(styles.groupTitle, theme.groupTitle)}>
-            {title}
-          </h2>
-          <Button
-            onClick={() => this.setState({ isOpen: !isOpen })}
-            theme={{ button: styles.toggleButton }}
-          >
-            {
-              icon &&
-                (
-                  <Icon
-                    icon={icon}
-                    theme={{ icon: isOpen ? styles.icon : styles.iconCollapse }}
-                  />
-                )
-            }
-          </Button>
+      <div className={cx(styles.cardWrapper, theme.cardWrapper)}>
+        <div
+          className={cx(styles.cardContent, theme.cardContent, {
+            [styles.open]: isOpen
+          })}
+        >
+          <div className={cx(styles.headerContainer, theme.headerContainer)}>
+            <h2 className={cx(styles.groupTitle, theme.groupTitle)}>
+              {title}
+            </h2>
+            <Button
+              onClick={() => this.setState({ isOpen: !isOpen })}
+              theme={{ button: styles.toggleButton }}
+            >
+              {
+                icon &&
+                  (
+                    <Icon
+                      icon={icon}
+                      theme={{
+                        icon: isOpen ? styles.icon : styles.iconCollapse
+                      }}
+                    />
+                  )
+              }
+            </Button>
+          </div>
+          {children}
         </div>
-        {children}
       </div>
     );
   }
@@ -59,7 +58,7 @@ AccordionCard.propTypes = {
   /** Text to be displayed as header */
   title: PropTypes.string.isRequired,
   /** Any data structure to render */
-  children: PropTypes.shape({}).isRequired,
+  children: PropTypes.shape([]).isRequired,
   /** Theming checkbox with customized styles */
   theme: PropTypes.shape({
     cardContainer: PropTypes.string,

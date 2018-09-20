@@ -1,12 +1,16 @@
 @import '../../styles/settings';
 
-.cardContainer {
-  padding: 30px;
+.cardWrapper {
+  padding: 30px 30px 10px;
   background-color: $white;
   margin-bottom: 4px;
+}
+
+.cardContent {
   overflow: hidden;
-  height: 75px;
+  height: 55px;
   transition: all 0.3s;
+  font-family: 'PierSans', sans-serif;
 
   .groupTitle {
     font-size: 20px;
@@ -20,9 +24,10 @@
 
 .toggleButton {
   padding: 0;
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   box-shadow: none;
+  border: none;
 
   &:hover {
     box-shadow: none;
@@ -41,6 +46,6 @@
 }
 
 .iconCollapse {
-  transform: rotate(270deg);
+  transform: rotate(270deg) translate(-3px, -2px);
   fill: $turquoise;
 }
