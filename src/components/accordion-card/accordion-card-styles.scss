@@ -10,7 +10,7 @@
   overflow: hidden;
   height: 55px;
   transition: all 0.3s;
-  font-family: 'PierSans', sans-serif;
+  font-family: $font-family-1;
 
   .groupTitle {
     font-size: 20px;
@@ -26,11 +26,11 @@
   padding: 0;
   width: 14px;
   height: 14px;
-  box-shadow: none;
   border: none;
+  background-color: transparent;
 
   &:hover {
-    box-shadow: none;
+    background-color: transparent;
   }
 }
 

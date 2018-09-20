@@ -12,6 +12,11 @@ class AccordionCard extends Component {
     this.state = { isOpen: props.isOpen };
   }
 
+  toggleCard = () => {
+    const { isOpen } = this.state;
+    this.setState({ isOpen: !isOpen });
+  };
+
   render() {
     const { icon, title, children, theme } = this.props;
     const { isOpen } = this.state;
@@ -27,7 +32,7 @@ class AccordionCard extends Component {
               {title}
             </h2>
             <Button
-              onClick={() => this.setState({ isOpen: !isOpen })}
+              onClick={this.toggleCard}
               theme={{ button: styles.toggleButton }}
             >
               {
