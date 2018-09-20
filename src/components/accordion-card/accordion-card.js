@@ -63,7 +63,7 @@ AccordionCard.propTypes = {
   /** Text to be displayed as header */
   title: PropTypes.string.isRequired,
   /** Any data structure to render */
-  children: PropTypes.shape([]).isRequired,
+  children: PropTypes.node,
   /** Theming checkbox with customized styles */
   theme: PropTypes.shape({
     cardContainer: PropTypes.string,
@@ -72,6 +72,11 @@ AccordionCard.propTypes = {
   })
 };
 
-AccordionCard.defaultProps = { isOpen: false, icon: chevronIcon, theme: {} };
+AccordionCard.defaultProps = {
+  isOpen: false,
+  icon: chevronIcon,
+  theme: {},
+  children: null
+};
 
 export default AccordionCard;
