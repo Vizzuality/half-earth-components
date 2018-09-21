@@ -7,3 +7,4 @@ export { default as Modal } from './components/modal';
 export { default as Sidebar } from './components/sidebar';
 export { default as AccordionCard } from './components/accordion-card';
 export { default as Checkbox } from './components/checkbox';
+export { default as ProgressBar } from './components/progress-bar';
