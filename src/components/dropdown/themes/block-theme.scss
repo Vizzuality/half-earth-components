@@ -1,0 +1,47 @@
+@import '../../../styles/settings';
+
+
+.label {
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin: 0;
+  min-width: 122px;
+}
+
+.options {
+  top: -1em;
+  background-color: rgba(6, 20, 32, 0.2);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 2.5em 15px 10px;
+  z-index: $zforeground - 1;
+  display: inline-block;
+  line-height: 2em;
+  border-bottom: 1px solid #1bcec7;
+  min-width: 122px;
+}
+
+.closeButton {
+  padding: 0;
+}
+
+.option {
+  font-size: 0.9em;
+  margin: 5px 0;
+  color: rgba($white, 0.5);
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+  }
+
+  &.optionSelected {
+    color: rgba($white, 0.2);
+  }
+}
+
+

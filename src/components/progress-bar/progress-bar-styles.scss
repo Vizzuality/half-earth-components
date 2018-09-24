@@ -1,0 +1,36 @@
+@import '../../styles/settings.scss';
+
+.outerBar {
+  position: relative;
+  width: 300px;
+  height: 9px;
+  border-radius: 15px;
+  background-color: $light-gray;
+}
+
+.progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 9px;
+  border-radius: 15px;
+  background-color: $turquoise;
+}
+
+.percentageLabel {
+  font-family: $font-family-1;
+  font-size: $font-size-xs;
+  font-weight: bold;
+  position: absolute;
+  top: -15px;
+  color: $dark;
+  transform: translate(-50%);
+}
+
+.label {
+  font-family: $font-family-1;
+  font-size: $font-size-xs;
+  color: $dark-gray;
+  font-weight: 300;
+}
