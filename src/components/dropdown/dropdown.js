@@ -70,7 +70,7 @@ Dropdown.propTypes = {
   /** Function to be triggered after selection selection */
   onSelect: PropTypes.func.isRequired,
   /** Available options for selection */
-  options: PropTypes.shape().isRequired,
+  options: PropTypes.array.isRequired,
   /** Selected option */
   selected: PropTypes.shape({
     slug: PropTypes.string,
