@@ -70,9 +70,7 @@ Dropdown.propTypes = {
   /** Function to be triggered after selection selection */
   onSelect: PropTypes.func.isRequired,
   /** Available options for selection */
-  options: PropTypes.shape([
-    { slug: PropTypes.string, label: PropTypes.string }
-  ]).isRequired,
+  options: PropTypes.shape().isRequired,
   /** Selected option */
   selected: PropTypes.shape({
     slug: PropTypes.string,
@@ -83,7 +81,14 @@ Dropdown.propTypes = {
    * block-theme.scss
    * inline-theme.scss
    */
-  theme: PropTypes.shape({})
+  theme: PropTypes.shape({
+    container: PropTypes.string,
+    label: PropTypes.string,
+    options: PropTypes.string,
+    option: PropTypes.string,
+    optionSelected: PropTypes.string,
+    closeButton: PropTypes.string
+  })
 };
 
 Dropdown.defaultProps = { theme: defaultTheme };
