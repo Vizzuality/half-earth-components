@@ -298,6 +298,17 @@ input:checked ~ .he__switch-input-styles_label {
   align-items: baseline;
   justify-content: space-between; }
 
+.he__accordion-card-styles_groupCounter {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #18bab4; }
+
 .he__accordion-card-styles_icon {
   transform: rotate(90deg);
   fill: #18bab4; }
@@ -420,7 +431,8 @@ input:checked ~ .he__checkbox-styles_checkbox::before {
   right: 0;
   border-bottom: 1px solid #1bcec7;
   list-style: none;
-  margin: 0; }
+  margin: 0;
+  z-index: 1; }
   .he__dropdown-styles_options.he__dropdown-styles_closed {
     display: none; }
 
@@ -453,7 +465,8 @@ input:checked ~ .he__checkbox-styles_checkbox::before {
 .he__inline-theme_label {
   color: #0a212e;
   margin: 0 2px;
-  min-width: 60px; }
+  min-width: 60px;
+  line-height: 1.4; }
 
 .he__inline-theme_options {
   min-width: 110px;
