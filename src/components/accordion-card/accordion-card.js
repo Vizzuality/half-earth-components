@@ -18,7 +18,7 @@ class AccordionCard extends Component {
   };
 
   render() {
-    const { icon, title, children, theme } = this.props;
+    const { icon, title, children, counter, theme } = this.props;
     const { isOpen } = this.state;
     return (
       <div className={cx(styles.cardWrapper, theme.cardWrapper)}>
@@ -31,22 +31,34 @@ class AccordionCard extends Component {
             <h2 className={cx(styles.groupTitle, theme.groupTitle)}>
               {title}
             </h2>
-            <Button
-              onClick={this.toggleCard}
-              theme={{ button: styles.toggleButton }}
-            >
+            <div className={styles.headerContainer}>
               {
-                icon &&
+                counter &&
                   (
-                    <Icon
-                      icon={icon}
-                      theme={{
-                        icon: isOpen ? styles.icon : styles.iconCollapse
-                      }}
-                    />
+                    <span
+                      className={cx(styles.groupCounter, theme.groupCounter)}
+                    >
+                      {counter}
+                    </span>
                   )
               }
-            </Button>
+              <Button
+                onClick={this.toggleCard}
+                theme={{ button: styles.toggleButton }}
+              >
+                {
+                  icon &&
+                    (
+                      <Icon
+                        icon={icon}
+                        theme={{
+                          icon: isOpen ? styles.icon : styles.iconCollapse
+                        }}
+                      />
+                    )
+                }
+              </Button>
+            </div>
           </div>
           {children}
         </div>
@@ -62,19 +74,23 @@ AccordionCard.propTypes = {
   icon: PropTypes.shape({}),
   /** Text to be displayed as header */
   title: PropTypes.string.isRequired,
+  /** Counter of active elements */
+  counter: PropTypes.number,
   /** Any data structure to render */
   children: PropTypes.node,
   /** Theming checkbox with customized styles */
   theme: PropTypes.shape({
     cardContainer: PropTypes.string,
     headerContainer: PropTypes.string,
-    groupTitle: PropTypes.string
+    groupTitle: PropTypes.string,
+    groupCounter: PropTypes.string
   })
 };
 
 AccordionCard.defaultProps = {
   isOpen: false,
   icon: chevronIcon,
+  counter: null,
   theme: {},
   children: null
 };
