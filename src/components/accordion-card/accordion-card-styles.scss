@@ -40,6 +40,18 @@
   justify-content: space-between;
 }
 
+.groupCounter {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  background-color: $primary-color;
+}
+
 .icon {
   transform: rotate(90deg);
   fill: $turquoise;
