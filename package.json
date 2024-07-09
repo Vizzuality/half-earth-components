@@ -11,12 +11,14 @@
     "deploy": "yarn run build && gh-pages -d styleguide"
   },
   "lint-staged": {
-    "**/*.scss": "stylelint --syntax=scss --fix",
-    "**/*.js": [
-      "prettier --single-quote --write",
-      "eslint --quiet --fix",
-      "git add"
-    ]
+    "linters": {
+      "**/*.scss": "stylelint --syntax=scss --fix",
+      "**/*.js": [
+        "prettier --single-quote --write",
+        "eslint --quiet --fix",
+        "git add"
+      ]
+    }
   },
   "husky": {
     "hooks": {
