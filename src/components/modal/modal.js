@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import ReactModal from 'react-modal';
 import PropTypes from 'prop-types';
 import Button from 'components/button';
@@ -9,8 +9,8 @@ import closeIcon from 'assets/icons/sidebar-close.svg';
 import styles from './modal-styles.scss';
 
 /* Customized modal using react-modal */
-class Modal extends PureComponent {
-  componentWillMount() {
+class Modal extends Component {
+  componentDidMount() {
     ReactModal.setAppElement('body');
   }
 
